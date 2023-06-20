@@ -1,0 +1,28 @@
+{
+  "name": "scheduling",
+  "version": "1.0.0",
+  "description": "A scheduling app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rrichglitch/Scheduling.git"
+  },
+  "keywords": [
+    "Haskell",
+    "Scheduling",
+    "Electron",
+    "nodeJS"
+  ],
+  "author": "RRichGlitch, 4esv",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rrichglitch/Scheduling/issues"
+  },
+  "homepage": "https://github.com/rrichglitch/Scheduling#readme",
+  "devDependencies": {
+    "electron": "^25.1.1"
+  }
+}
