@@ -1,3 +1,3 @@
 # Scheduling
 
-This is a scheduling app
+*This is a scheduling app.*
