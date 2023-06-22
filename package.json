@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/rrichglitch/Scheduling#readme",
   "devDependencies": {
-    "electron": "^25.1.1"
+    "electron": "^25.2.0"
   }
 }
