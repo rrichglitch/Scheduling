@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/rrichglitch/Scheduling#readme",
   "devDependencies": {
-    "electron": "^25.2.0"
+    "electron": "^25.2.0",
+    "electron-reloader": "^1.2.3"
   }
 }
