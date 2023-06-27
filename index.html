@@ -2,15 +2,35 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline'; script-src 'self';">
     <link rel="stylesheet" href="style.css">
     <title>Schedule</title>
   </head>
   <body>
     <section>
-    <h1>Hello World!</h1>
-    We are using Node.js
-    <span id="node-version"></span>,Chromium <span id="chrome-version"></span>,and Electron <span id="electron-version"></span>.
+      <h1>Hello World!</h1>
+      We are using Node.js <span id="node-version"></span>,Chromium <span id="chrome-version"></span>,and Electron <span id="electron-version"></span>
     </section>
+    <form>
+      <section style="margin:3vh">
+        <div style="margin:auto; text-align:center; min-height:20vh;">
+          <button type="button"><label for="avail_file">Availability</label></button>
+          <input id="avail_file" style="display:none" type="file" required>
+          <div id="avail_prev" class="prev"></div>
+        </div>
+        <div style="margin:auto; text-align:center; min-height:20vh;">
+          <button type="button"><label for="reqs_file">Requirements</label></button>
+          <input id="reqs_file" style="display:none" type="file" required>
+          <div id="reqs_prev" class="prev"></div>
+        </div>
+        <div style="margin:auto; text-align:center; min-height:20vh;">
+          <button type="button"><label for="roles_file">Roles</label></button>
+          <input id="roles_file" style="display:none" type="file" required>
+          <div id="roles_prev" class="prev"></div>
+        </div>
+      </section>
+      <input id="gen_btn" type="submit" value="Generate Schedule">
+    </form>
   </body>
+  <script type="text/javascript" src="index.js"></script>
 </html>
