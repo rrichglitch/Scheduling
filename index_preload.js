@@ -14,5 +14,8 @@ window.addEventListener("DOMContentLoaded", () => {
 contextBridge.exposeInMainWorld('electronAPI', {
     setField: (index, file) => ipcRenderer.send('setField', index, file),
     getSched: () => ipcRenderer.send('getSched'),
+    showAvail: (callback) => ipcRenderer.on('showAvail', callback),
+    showReqs: (callback) => ipcRenderer.on('showReqs', callback),
+    showRoles: (callback) => ipcRenderer.on('showRoles', callback),
 });
 

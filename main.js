@@ -7,32 +7,31 @@ const fs = require('fs')
 
 const devMode = process.env.NODE_ENV !== 'production'
 
+let win;
 let availability;
 let requirements;
 let roles;
 
 function setAvailability(data){
   console.log(data);
-  availability = data
+  // availability = JSON.parse(data)
+  win.webContents.send("showAvail", data)
 }
 function setRequirements(data){
   console.log(data);
-  requirements = data;
+  // requirements = JSON.parse(data);
+  win.webContents.send("showReqs", data)
 }
 function setRoles(data){
   console.log(data);
-  roles = data;
-  
+  roles = JSON.parse(data);
+  win.webContents.send("showRoles", roles)
 }
 let setFieldFuncs = [setAvailability,setRequirements,setRoles];
 
-function showData(index, data){
-
-}
-
 // Functions
 const createWindow = () => {
-  const win = new BrowserWindow({
+  win = new BrowserWindow({
     width: 800 + (devMode ? 400 : 0),
     height: 600,
     webPreferences: {
@@ -64,11 +63,13 @@ app.whenReady().then(() => {
   })
 
   ipcMain.on('getSched', (e) => {
-    console.log("hook into the server and send the parameters\ninitiating the schedule making algo!")
+    if(availability && requirements && roles)
+      console.log("hook into the server and send the parameters\ninitiating the schedule making algo!")
+    else console.log("NOT ALL PARAMETERS SET!")
   })
 })
 
 // Close
 app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') app.quit()
+  if(process.platform !== 'darwin') app.quit()
 })
