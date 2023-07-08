@@ -1,19 +1,81 @@
+:root {
+  --background : #000;
+  --text: #DDD;
+  --accent-1: #de938e;
+  --accent-2: coral;
+  --accent-3: wheat;
+  --accent-4:papayawhip;
+}
+
+html {
+  font-family: monospace;
+}
+
 body {
-  background-color: #111;
-  color: lightcoral;
+  background-color: var(--background);
+  color: var(--text);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: 1px solid;
-  border-color: red;
-  padding: 0px;
-}
-
-.menu {
-  background-color: blue
+  border: 1px solid red;
+  padding: 0;
+  margin: 0;
+  height: min(99.5vh);
 }
 
 .content {
+  margin: 0;
+  padding: 0;
   background-color: red;
+}
+
+button {
+  background-color: var(--background);
+  border: 3px solid #00000050;
+  border-radius: 8px;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  box-sizing: border-box;
+  color: var(--font);
+  cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 29px;
+  padding: 0 10px 0 11px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+button:hover {
+  background-color: var(--accent-1);
+  color: var(--background);
+}
+
+button:focus {
+  border-color: var(--text);
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  outline: 0;
+}
+
+.buttons {
+  width: 50vw;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.button-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
 }
