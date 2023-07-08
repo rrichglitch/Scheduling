@@ -10,4 +10,10 @@ body {
   padding: 0px;
 }
 
+.menu {
+  background-color: blue
+}
 
+.content {
+  background-color: red;
+}
